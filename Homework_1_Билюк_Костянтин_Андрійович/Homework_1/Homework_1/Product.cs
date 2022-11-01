@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 
 namespace Homework_1
-{
+{// Ви дали можливість задавати будь-які поля, в тому числі і від'ємні.  Це неправильно.
     class Product
     {
         public Product(Product product)
