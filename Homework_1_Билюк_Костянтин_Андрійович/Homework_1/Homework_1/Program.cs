@@ -9,7 +9,8 @@ namespace Homework_1
     class Program
     {
         static void Main(string[] args)
-        {
+        {// Вітаю. Все доступно.
+            
             Product cake = new Product("Cake", 7.99, 0.850);
             Product meal = new Product("Meal", 12.99, 1);
 
