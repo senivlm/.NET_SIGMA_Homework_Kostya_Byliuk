@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Homework_2
-{
+{//Добре зробити клас узагальнення. адже це контейнер
     class Tensor
     {
         public int Length { get { return tensorOneDimension.Length; } }
+        //Навіщо приватна властивість????
         private int[] Dimensions { get; set; }
         
         private int[] DimensionsMain
@@ -46,7 +47,7 @@ namespace Homework_2
             dimensions.CopyTo(Dimensions, 0);
             tensorOneDimension = new int[LenghtTensorOneDimension()];
         }
-
+//А якщо індексів прийде більше, ніж слід?
         public int this[params int[] indices]
         {
             get
