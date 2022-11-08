@@ -96,7 +96,7 @@ namespace Homework_2
                 for (int i = 0; i < size; i++)
                 {
                     int j = i - diff;
-
+//лишні умови
                     if (j < 0 || j >= size)
                         continue;
                     if (((diff + size + 1) % 2) != 0)
@@ -222,7 +222,7 @@ namespace Homework_2
                     }   
                 }
             }
-
+//роздрук в методі пошуку - погана ідея!
             Print(true);
             Console.WriteLine("Lenght: " + countLenMax);
             Console.WriteLine("StartIndex: " + kStartMax);
