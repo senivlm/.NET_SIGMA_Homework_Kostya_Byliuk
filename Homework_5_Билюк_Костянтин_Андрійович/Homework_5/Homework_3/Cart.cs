@@ -9,13 +9,14 @@ namespace Homework_5
     class Cart
     {
         public int Length { get; }
+        //Для пошуку краще було б організувати словник
         private List<Buy> _purchases { get; set; }
         public Currency Currency { get; set; }
         public WeightMeasurement WeightMeasurement { get; set; }
 
 
         public Buy this[int i]
-        {
+        {// не має перевірки для індексу
             get { return _purchases[i]; }
             set { _purchases[i] = value; }
         }
