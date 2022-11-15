@@ -17,7 +17,7 @@ namespace Homework_4_2
             Length = size;
             _arr = new int[Length];
         }
-
+// Знову метод друку в модельному класі
         public void Print()
         {
             for (int i = 0; i < _arr.Length; i++)
@@ -27,7 +27,7 @@ namespace Homework_4_2
         }
 
         public int this [int a]
-        {
+        {// Немає перевірки на вихід індекса за межі діапазону.
             get { return _arr[a]; }
             set { _arr[a] = value; }
         }
@@ -47,7 +47,7 @@ namespace Homework_4_2
                 if (!dic.ContainsKey(item)) dic[item] = 0;
                 dic[item]++;
             }
-
+// Треба просто повернути словник
             Console.WriteLine("Number\tQuantity:\n");
             foreach (var e in dic)
             {
@@ -57,14 +57,15 @@ namespace Homework_4_2
         }
 
         public void TwoLongestSubsequences()
-        {
+        {// алгоритмічно не все враховано
             var list = new List<int>();
             var firstList = new List<int>();
             var secondList = new List<int>();
 
 
             for (int i = 0; i < Length; i++)
-            {
+            {// можливий вихід за межі діапазону
+                // Чому _arr[i] + 1 == _arr[i + 1])?
                 if (i + 1 < Length && _arr[i] + 1 == _arr[i + 1])
                 {
                     list.Add(_arr[i]);
@@ -85,7 +86,7 @@ namespace Homework_4_2
                     list.Clear();
                 }
             }
-
+// А якщо пошук призначений не для роздруку?
             Console.Write("\n\nFirst subsequences: ");
             foreach (var item in firstList)
             {
