@@ -34,7 +34,8 @@ namespace Homework_3
             _products = new Product[length];
             Length = length;
         }
-
+// Хотілося б почути міркування, чи коректно такий метод вносити в клас.
+        // Крім того не зрозуміло, чому повертаємо Storage, а не список 
         public Storage MeatProducts()
         {
             int lengthMeatStorage = 0;
@@ -106,7 +107,7 @@ namespace Homework_3
             var numberFormatInfo = new NumberFormatInfo() { NumberDecimalSeparator = "."};
 
             for (int i = 0; i < Length; i++)
-            {
+            {// прив'язка до роздруків робить цей клас не придатним для інших технологій!!!
                 Console.WriteLine($"({i + 1})\n");
                 Console.WriteLine("1. Enter the name, price and weight of the product");
                 
@@ -177,7 +178,7 @@ namespace Homework_3
         }
 
         private void TryAgain(string question)
-        {
+        {//знову прив'язка
             Console.SetCursorPosition(0, Console.CursorTop - 1);
             Console.WriteLine("Incorrect input. Try again");
             Console.WriteLine(question);
