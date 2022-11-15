@@ -73,6 +73,7 @@ namespace Homework_3
         public static bool Equals(object? obj, object? obj2)
         {
             if (obj == obj2) return true;
+            // А якщо обидва null?
             if (obj == null || obj2 == null) return false;
             else return obj.Equals(obj2);
         }
