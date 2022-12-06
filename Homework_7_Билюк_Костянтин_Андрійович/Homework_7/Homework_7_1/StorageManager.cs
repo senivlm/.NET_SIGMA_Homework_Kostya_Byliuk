@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Homework_7_1
-{
+{// Чому не методи Union,Except, Intersection?
     class StorageManager
     {
         public static List<Product> Differ(Storage storage, Storage storage2) // Товари є в першому складі і немає в другому.
