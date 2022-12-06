@@ -19,7 +19,7 @@ namespace Homework_7_2
                     throw new Exception("CheckSum shouldn't be a negative one");
                 _checkSum = value;
             }
-        }
+        }// ви зробили реальною ситуацію, коли Видаєте номер через конструктор. Обчислюєте суму, потім міняєте номер, а потім виводите суму, але старого номера.
         public string Number 
         {
             get { return _number; }
