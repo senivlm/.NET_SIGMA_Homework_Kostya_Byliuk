@@ -30,7 +30,7 @@ namespace Homework_7_2
                     throw new Exception("The card the card does not have a valid number in global payment systems");
             }
             else if (card.Number.Length == 16)
-            {
+            {// Можна об'єднувати case 52:case53 ...
                 switch (keyNumbers)
                 {
                     case "51":
@@ -63,7 +63,7 @@ namespace Homework_7_2
             }
 
             var numbers = new int[str.Length];
-
+//Алгоритмічно не правильно
             for (int i = 0; i < str.Length; i++)
             {
                 numbers[i] = Convert.ToInt32(str[i].ToString()) * 2;
@@ -82,6 +82,7 @@ namespace Homework_7_2
             }
 
             card.CheckSum = result;
+            // return result % 10 == 0 вистачає
             return result % 10 == 0 ? true : false;
         }
     }
